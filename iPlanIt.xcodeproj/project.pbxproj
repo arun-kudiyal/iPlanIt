@@ -12,6 +12,8 @@
 		C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */; };
 		C867318C2B567F48001E3FFE /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C867318B2B567F48001E3FFE /* DemoViewController.swift */; };
 		C870E61D2B5643CF00BFA3CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */; };
+		C8BF45E12B58E2AD00B01E6A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF45E02B58E2AD00B01E6A /* AddTaskViewController.swift */; };
+		C8BF45E32B58F1AA00B01E6A /* AddTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF45E22B58F1AA00B01E6A /* AddTaskTableViewCell.swift */; };
 		C8D333602B50F4FE00B3D846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D3335F2B50F4FE00B3D846 /* AppDelegate.swift */; };
 		C8D333622B50F4FE00B3D846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D333612B50F4FE00B3D846 /* SceneDelegate.swift */; };
 		C8D333642B50F4FE00B3D846 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D333632B50F4FE00B3D846 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		C867318B2B567F48001E3FFE /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C8BF45E02B58E2AD00B01E6A /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		C8BF45E22B58F1AA00B01E6A /* AddTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskTableViewCell.swift; sourceTree = "<group>"; };
 		C8D3335C2B50F4FE00B3D846 /* iPlanIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPlanIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D3335F2B50F4FE00B3D846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D333612B50F4FE00B3D846 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		C8D3335E2B50F4FE00B3D846 /* iPlanIt */ = {
 			isa = PBXGroup;
 			children = (
+				C8BF45E02B58E2AD00B01E6A /* AddTaskViewController.swift */,
+				C8BF45E22B58F1AA00B01E6A /* AddTaskTableViewCell.swift */,
 				C867318B2B567F48001E3FFE /* DemoViewController.swift */,
 				C8D3335F2B50F4FE00B3D846 /* AppDelegate.swift */,
 				C8D333612B50F4FE00B3D846 /* SceneDelegate.swift */,
@@ -155,11 +161,13 @@
 			files = (
 				C8D333642B50F4FE00B3D846 /* ViewController.swift in Sources */,
 				C8D333602B50F4FE00B3D846 /* AppDelegate.swift in Sources */,
+				C8BF45E32B58F1AA00B01E6A /* AddTaskTableViewCell.swift in Sources */,
 				C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */,
 				C8403CCC2B50FE0200CDF949 /* Task.swift in Sources */,
 				C8403CCA2B50FCE800CDF949 /* TasksTableViewController.swift in Sources */,
 				C870E61D2B5643CF00BFA3CC /* HomeViewController.swift in Sources */,
 				C8D333622B50F4FE00B3D846 /* SceneDelegate.swift in Sources */,
+				C8BF45E12B58E2AD00B01E6A /* AddTaskViewController.swift in Sources */,
 				C867318C2B567F48001E3FFE /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,14 +12,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityDetails: UIStackView!
     @IBOutlet weak var completedTask: UILabel!
     @IBOutlet weak var activityRingImage: UIImageView!
-    
+    @IBOutlet weak var calenderButton: UIButton!
     override func viewDidLoad() {
         /// Adding padding to Activity Stack View
-        activityDetails.layoutMargins = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        activityDetails.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         activityDetails.isLayoutMarginsRelativeArrangement = true
         /// Respond to tap gesture
         activityRingImage.isUserInteractionEnabled = true
         activityRingImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
+        /// Adding calender icon from SFSymbols
+        calenderButton.setImage(UIImage(systemName: "calendar"), for: .normal)
+        calenderButton.tintColor = .black
     }
     
     /// Image Tap Handler Function

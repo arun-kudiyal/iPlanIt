@@ -1,0 +1,48 @@
+//
+//  AddTaskViewController.swift
+//  iPlanIt
+//
+//  Created by Arun Kudiyal on 18/01/24.
+//
+
+import UIKit
+
+class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var suggestionsTableView: UITableView!
+    @IBOutlet weak var emojiLabel: UILabel!
+    
+    var suggestions: [Task] = [
+        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false),
+        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false),
+        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false),
+        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false),
+        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false)
+    ]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return suggestions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskCell", for: indexPath) as! AddTaskTableViewCell
+        let suggestion = suggestions[indexPath.row]
+        
+        cell.update(with: suggestion)
+        return cell
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        suggestionsTableView.delegate = self
+        suggestionsTableView.dataSource = self
+        
+        /// Adding cornerRadius to the emoji & label
+        emojiLabel.layer.masksToBounds = true
+        emojiLabel.layer.cornerRadius = 10.0
+        
+        /// Adding padding to Emoji Label
+        emojiLabel.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+}
