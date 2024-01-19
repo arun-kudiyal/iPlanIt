@@ -130,32 +130,43 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-6u-zub">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8D4-6u-zub">
                                 <rect key="frame" x="16" y="273" width="361" height="549"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddTaskCell" id="yNh-EV-jx8" customClass="AddTaskTableViewCell" customModule="iPlanIt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddTaskCell" id="yNh-EV-jx8" customClass="AddTaskTableViewCell" customModule="iPlanIt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yNh-EV-jx8" id="pQ6-OS-FGZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330.66666666666669" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0A-wI-Thg">
-                                                    <rect key="frame" x="12" y="0.0" width="55" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0A-wI-Thg">
+                                                    <rect key="frame" x="10" y="10" width="71" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="X9K-JF-ttr"/>
+                                                        <constraint firstAttribute="width" constant="71" id="h23-Ci-YBU"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcQ-3r-c48">
-                                                    <rect key="frame" x="90" y="0.0" width="271" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcQ-3r-c48">
+                                                    <rect key="frame" x="95.999999999999986" y="18" width="224.66666666666663" height="54"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EcQ-3r-c48" firstAttribute="top" secondItem="pQ6-OS-FGZ" secondAttribute="topMargin" constant="7" id="1rY-X9-f1t"/>
+                                                <constraint firstItem="EcQ-3r-c48" firstAttribute="leading" secondItem="T0A-wI-Thg" secondAttribute="trailing" constant="15" id="DjF-v4-ryB"/>
+                                                <constraint firstAttribute="trailing" secondItem="EcQ-3r-c48" secondAttribute="trailing" constant="10" id="K20-ab-tdK"/>
+                                                <constraint firstAttribute="bottom" secondItem="T0A-wI-Thg" secondAttribute="bottom" constant="10" id="NOl-H1-UU7"/>
+                                                <constraint firstItem="T0A-wI-Thg" firstAttribute="top" secondItem="pQ6-OS-FGZ" secondAttribute="top" constant="10" id="Wcd-0u-8yd"/>
+                                                <constraint firstItem="EcQ-3r-c48" firstAttribute="centerY" secondItem="pQ6-OS-FGZ" secondAttribute="centerY" id="azg-XN-e2j"/>
+                                                <constraint firstItem="T0A-wI-Thg" firstAttribute="leading" secondItem="pQ6-OS-FGZ" secondAttribute="leading" constant="10" id="cYR-ow-TN3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="suggestionEmojiLabel" destination="T0A-wI-Thg" id="6MU-gj-5th"/>

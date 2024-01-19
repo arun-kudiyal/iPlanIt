@@ -14,15 +14,20 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
    
     /// Suggestions State
     var suggestions: [Task] = [
-        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false, color: .red),
-        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false, color: .blue),
-        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false, color: .red),
-        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false, color: .purple),
-        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false, color: .gray)
+        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false, color: "cyan"),
+        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false, color: "blue"),
+        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false, color: "red"),
+        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false, color: "pink"),
+        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false, color: "gray")
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return suggestions.count
+        suggestions.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
