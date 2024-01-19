@@ -11,13 +11,14 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var suggestionsTableView: UITableView!
     @IBOutlet weak var emojiLabel: UILabel!
-    
+   
+    /// Suggestions State
     var suggestions: [Task] = [
-        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false),
-        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false),
-        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false),
-        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false),
-        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false)
+        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false, color: .red),
+        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false, color: .blue),
+        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false, color: .red),
+        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false, color: .purple),
+        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false, color: .gray)
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

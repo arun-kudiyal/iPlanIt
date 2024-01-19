@@ -31,11 +31,12 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         /// Configure the view for the selected state
     }
-
+    
     func update(with task: Task) {
         taskEmoji.text = task.emoji
         taskName.text = task.title
         taskCompleted.text = task.isCompleted ? "✅" : "❌"
+        /// striking the taskName using extension
         if(task.isCompleted) {
             taskName.attributedText = taskName.text?.strikeThrough()
             taskName.textColor = .gray
