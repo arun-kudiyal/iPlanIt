@@ -6,9 +6,12 @@
 //
 
 import UIKit
-
+protocol YourCellDelegate: AnyObject {
+    func didSelectCell(with data: Task)
+}
 class AddTaskTableViewCell: UITableViewCell {
     
+    weak var delegate: YourCellDelegate?
     @IBOutlet weak var suggestionEmojiLabel: UILabel!
     @IBOutlet weak var suggestionNameLabel: UILabel!
     
@@ -21,9 +24,13 @@ class AddTaskTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        var selectedTask: Task = selected.
+        
+        // delegate?.didSelectCell(with: id)
     }
+    
+    didSelectR
     
     /// Adding margin to Emoji Label
     override func layoutSubviews() {

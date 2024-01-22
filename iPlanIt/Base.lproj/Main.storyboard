@@ -89,6 +89,7 @@
                                         <connections>
                                             <outlet property="suggestionEmojiLabel" destination="T0A-wI-Thg" id="6MU-gj-5th"/>
                                             <outlet property="suggestionNameLabel" destination="EcQ-3r-c48" id="YNb-Dz-Vzu"/>
+                                            <segue destination="Yfe-Sh-dYW" kind="show" id="Kxr-Jw-jW1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -130,11 +131,11 @@
             <objects>
                 <viewController id="goP-XN-THr" customClass="EditTaskViewController" customModule="iPlanIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ULh-hh-DvD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="muj-kN-Lvm">
-                                <rect key="frame" x="16" y="66" width="361" height="766"/>
+                                <rect key="frame" x="16" y="113" width="361" height="695"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-SF-lhI">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="75"/>
@@ -811,7 +812,7 @@
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jnN-9z-QoF">
-                                        <rect key="frame" x="0.0" y="532.66666666666663" width="361" height="233.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="532.66666666666663" width="361" height="162.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-YU-SL5">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
@@ -820,7 +821,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PiB-jl-f1K">
-                                                <rect key="frame" x="0.0" y="20.333333333333371" width="361" height="213"/>
+                                                <rect key="frame" x="0.0" y="20.333333333333371" width="361" height="142"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -855,7 +856,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Task" id="l9I-UZ-k6e">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pI6-dV-vsf"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pI6-dV-vsf">
+                            <connections>
+                                <segue destination="Yr8-eb-Pci" kind="unwind" unwindAction="unwindToAddTaskWithSegue:" id="u6c-B0-Fm9"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="PqO-eN-cNV"/>
                     </navigationItem>
                     <connections>
@@ -863,6 +868,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhG-JU-jOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Yr8-eb-Pci" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="HoY-QG-wAS">
                     <connections>
                         <action selector="colorImageTapped:" destination="goP-XN-THr" id="J3e-th-MgR"/>
@@ -1421,8 +1427,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yfe-Sh-dYW" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pXG-hd-T9o"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cFL-kD-Uhf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1453,6 +1460,9 @@
             <point key="canvasLocation" x="1651" y="-695"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kxr-Jw-jW1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Activity Ring" width="501" height="498"/>
         <image name="Badge" width="472" height="529"/>

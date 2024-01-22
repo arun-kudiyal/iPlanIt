@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83ACCB12B5E783600558B66 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83ACCB02B5E783600558B66 /* Suggestion.swift */; };
 		C8403CCA2B50FCE800CDF949 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */; };
 		C8403CCC2B50FE0200CDF949 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCB2B50FE0200CDF949 /* Task.swift */; };
 		C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C83ACCB02B5E783600558B66 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		C8403CCB2B50FE0200CDF949 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,7 +75,6 @@
 				C8AAADAE2B5BCC960040BD15 /* PendingTaskTableViewCell.swift */,
 				C8AAADAC2B5BCC7E0040BD15 /* CompletedTaskTableViewCell.swift */,
 				C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */,
-				C8403CCB2B50FE0200CDF949 /* Task.swift */,
 				C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */,
 			);
 			path = TaskList;
@@ -87,6 +88,15 @@
 				C8BF45E62B5A493800B01E6A /* EditTaskViewController.swift */,
 			);
 			path = EditTask;
+			sourceTree = "<group>";
+		};
+		C83ACCAF2B5E77F700558B66 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8403CCB2B50FE0200CDF949 /* Task.swift */,
+				C83ACCB02B5E783600558B66 /* Suggestion.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C8D333532B50F4FE00B3D846 = {
@@ -108,6 +118,7 @@
 		C8D3335E2B50F4FE00B3D846 /* iPlanIt */ = {
 			isa = PBXGroup;
 			children = (
+				C83ACCAF2B5E77F700558B66 /* Models */,
 				C80F4CEB2B5BF76400099D21 /* EditTask */,
 				C80F4CEA2B5BF75A00099D21 /* TaskList */,
 				C80F4CE92B5BF75000099D21 /* Home */,
@@ -197,6 +208,7 @@
 				C8D333602B50F4FE00B3D846 /* AppDelegate.swift in Sources */,
 				C8BF45E32B58F1AA00B01E6A /* AddTaskTableViewCell.swift in Sources */,
 				C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */,
+				C83ACCB12B5E783600558B66 /* Suggestion.swift in Sources */,
 				C8AAADAF2B5BCC960040BD15 /* PendingTaskTableViewCell.swift in Sources */,
 				C8AAADA92B5A69440040BD15 /* TaskListViewController.swift in Sources */,
 				C8403CCC2B50FE0200CDF949 /* Task.swift in Sources */,

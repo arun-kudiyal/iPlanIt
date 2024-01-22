@@ -13,12 +13,12 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var emojiLabel: UILabel!
    
     /// Suggestions State
-    var suggestions: [Task] = [
-        Task(title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "🛒", isCompleted: false, color: "cyan"),
-        Task(title: "Salon", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💇‍♀️", isCompleted: false, color: "blue"),
-        Task(title: "Meeting", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "💻", isCompleted: false, color: "red"),
-        Task(title: "Soccer Parctice", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "⚽️", isCompleted: false, color: "pink"),
-        Task(title: "Meet a Friend", time: Date(timeIntervalSinceReferenceDate: 6), emoji: "☕️", isCompleted: false, color: "gray")
+    var suggestions: [Suggestion] = [
+        Suggestion(id: 1, title: "Groceries", emoji: "🛒", color: "cyan"),
+        Suggestion(id: 2, title: "Salon", emoji: "💇‍♀️", color: "blue"),
+        Suggestion(id: 3, title: "Meeting", emoji: "💻", color: "red"),
+        Suggestion(id: 4, title: "Soccer Parctice", emoji: "⚽️", color: "pink"),
+        Suggestion(id: 5, title: "Meet a Friend", emoji: "☕️", color: "gray")
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,12 +31,26 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskCell", for: indexPath) as! AddTaskTableViewCell
+        /* let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskCell", for: indexPath) as! AddTaskTableViewCell
         let suggestion = suggestions[indexPath.row]
         
         cell.update(with: suggestion)
-        return cell
+        return cell */
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    /// Passing Task data to segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? EditTaskViewController {
+            print("Works!")
+        }
+    }
+    
+    /// Unwind Segue
+    @IBAction func unwindToAddTask(segue: UIStoryboardSegue) {}
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,11 +14,11 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     
     /// Demo Tasks
     var tasks: [Task] = [
-        Task(title: "Gym", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
-        Task(title: "Lunch", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
-        Task(title: "Shopping", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green"),
-        Task(title: "Soccer Practice", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "⚽️", isCompleted: false, color: "green"),
-        Task(title: "Lectures", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "💻", isCompleted: false, color: "green")
+        Task(id: 1, title: "Gym", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
+        Task(id: 2, title: "Lunch", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
+        Task(id: 3, title: "Shopping", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green"),
+        Task(id: 4, title: "Soccer Practice", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "⚽️", isCompleted: false, color: "green"),
+        Task(id: 5, title: "Lectures", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "💻", isCompleted: false, color: "green")
     ]
     
     var completedTasks: [Task] = []

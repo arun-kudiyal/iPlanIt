@@ -18,7 +18,6 @@ class EditTaskViewController: UIViewController {
         emojiLabel.layer.masksToBounds = true
         emojiLabel.layer.cornerRadius = 10.0
     }
-    
     /// ColorTapGestureRecogbizer
     @IBAction func colorImageTapped(_ sender: UITapGestureRecognizer) {
         switch sender.view?.tag {
