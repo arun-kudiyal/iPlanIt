@@ -25,12 +25,10 @@ class AddTaskTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        var selectedTask: Task = selected.
+        // var selectedTask: Task = selected.
         
         // delegate?.didSelectCell(with: id)
     }
-    
-    didSelectR
     
     /// Adding margin to Emoji Label
     override func layoutSubviews() {
@@ -51,13 +49,13 @@ class AddTaskTableViewCell: UITableViewCell {
         }
     }
     
-    func update(with task: Task) {
+    func update(with suggestion: Suggestion) {
         /// Changes the view of the AddTaskTableView
-        suggestionEmojiLabel.text = task.emoji
-        suggestionNameLabel.text = task.title
+        suggestionEmojiLabel.text = suggestion.emoji
+        suggestionNameLabel.text = suggestion.title
         
         /// Setting the background color of the emojiLabel using extensions
-        suggestionEmojiLabel.backgroundColor = chooseColor("\(task.color)")
+        suggestionEmojiLabel.backgroundColor = chooseColor("\(suggestion.color)")
         
         /// Adding cornerRadius to the emoji
         suggestionEmojiLabel.layer.masksToBounds = true

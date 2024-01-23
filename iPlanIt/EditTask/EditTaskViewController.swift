@@ -11,13 +11,6 @@ class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        /// Adding cornerRadius to the emoji & label
-        emojiLabel.layer.masksToBounds = true
-        emojiLabel.layer.cornerRadius = 10.0
-    }
     /// ColorTapGestureRecogbizer
     @IBAction func colorImageTapped(_ sender: UITapGestureRecognizer) {
         switch sender.view?.tag {
@@ -54,4 +47,7 @@ class EditTaskViewController: UIViewController {
         default: emojiLabel.text = "😃"
         }
     }
+    
+    /// CalenderView Button Tap
+    
 }

@@ -13,13 +13,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var taskTableView: UITableView!
     
     /// Demo Tasks
-    var tasks: [Task] = [
-        Task(id: 1, title: "Gym", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
-        Task(id: 2, title: "Lunch", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
-        Task(id: 3, title: "Shopping", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green"),
-        Task(id: 4, title: "Soccer Practice", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "⚽️", isCompleted: false, color: "green"),
-        Task(id: 5, title: "Lectures", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "💻", isCompleted: false, color: "green")
-    ]
+    var tasks = dataModel.getAllTasks()
     
     var completedTasks: [Task] = []
     var pendingTaks: [Task] = []

@@ -10,9 +10,9 @@ import UIKit
 class TasksTableViewController: UITableViewController {
     /// Demo Tasks
     var tasks = [
-        Task(title: "Task - 1", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
-        Task(title: "Task - 2", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
-        Task(title: "Task - 3", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green")
+        Task(id:1, title: "Task - 1", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
+        Task(id:2, title: "Task - 2", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
+        Task(id:3, title: "Task - 3", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green")
     ]
     
     override func viewDidLoad() {

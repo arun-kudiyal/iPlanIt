@@ -11,7 +11,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var suggestionsTableView: UITableView!
     @IBOutlet weak var emojiLabel: UILabel!
-   
+    @IBOutlet weak var plannedTaskLabel: UITextField!
+    
     /// Suggestions State
     var suggestions: [Suggestion] = [
         Suggestion(id: 1, title: "Groceries", emoji: "🛒", color: "cyan"),
@@ -31,11 +32,11 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /* let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskCell", for: indexPath) as! AddTaskTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddTaskCell", for: indexPath) as! AddTaskTableViewCell
         let suggestion = suggestions[indexPath.row]
         
         cell.update(with: suggestion)
-        return cell */
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -44,9 +45,15 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     /// Passing Task data to segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? EditTaskViewController {
-            print("Works!")
+        if segue.destination is UINavigationController {
+            
         }
+        /* if let destinationVC = segue.destination as? UINavigationController {
+            print(destinationVC)
+        } else {
+            print("Destination is - \(segue.destination)")
+            // print("Does not work...")
+        } */
     }
     
     /// Unwind Segue
