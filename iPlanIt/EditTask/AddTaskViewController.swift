@@ -14,13 +14,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var plannedTaskLabel: UITextField!
     
     /// Suggestions State
-    var suggestions: [Suggestion] = [
-        Suggestion(id: 1, title: "Groceries", emoji: "🛒", color: "cyan"),
-        Suggestion(id: 2, title: "Salon", emoji: "💇‍♀️", color: "blue"),
-        Suggestion(id: 3, title: "Meeting", emoji: "💻", color: "red"),
-        Suggestion(id: 4, title: "Soccer Parctice", emoji: "⚽️", color: "pink"),
-        Suggestion(id: 5, title: "Meet a Friend", emoji: "☕️", color: "gray")
-    ]
+    var suggestions: [Suggestion] = suggestionDataModel.getAllSuggestions()
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         suggestions.count

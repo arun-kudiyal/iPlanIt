@@ -10,6 +10,7 @@ import UIKit
 class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var colorWell: UIColorWell!
     
     /// ColorTapGestureRecogbizer
     @IBAction func colorImageTapped(_ sender: UITapGestureRecognizer) {
@@ -48,6 +49,16 @@ class EditTaskViewController: UIViewController {
         }
     }
     
-    /// CalenderView Button Tap
+    /// Pick color from Color Well
+    func colorWellChanged() {
+        self.colorWell.addTarget(self, action: #selector(colorWellChanged(_:)), for: .valueChanged)
+    }
+    @objc func colorWellChanged(_ sender: Any) {
+        self.emojiLabel.backgroundColor = colorWell.selectedColor
+    }
     
+    /// CalenderView Button Tap
+    override func viewDidLoad() {
+        colorWellChanged()
+    }
 }

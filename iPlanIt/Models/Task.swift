@@ -16,7 +16,7 @@ struct Task {
     }
 }
 
-class AppDataModel {
+class AppTaskDataModel {
     private var tasks: [Task] = []
     /// Sample Task Data
     init() {
@@ -37,4 +37,4 @@ class AppDataModel {
     func addTask(task: Task) { self.tasks.append(task) }
 }
 
-var dataModel = AppDataModel()
+var taskDataModel = AppTaskDataModel()

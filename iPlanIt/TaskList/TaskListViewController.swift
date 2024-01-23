@@ -13,7 +13,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var taskTableView: UITableView!
     
     /// Demo Tasks
-    var tasks = dataModel.getAllTasks()
+    var tasks = taskDataModel.getAllTasks()
     
     var completedTasks: [Task] = []
     var pendingTaks: [Task] = []

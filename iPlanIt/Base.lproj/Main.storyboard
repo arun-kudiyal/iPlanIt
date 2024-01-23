@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sZ-yU-9MV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3450" y="37"/>
+            <point key="canvasLocation" x="2578" y="67"/>
         </scene>
         <!--Edit Task-->
         <scene sceneID="ZzF-Qc-lec">
@@ -191,7 +191,7 @@
                                         <rect key="frame" x="0.0" y="155" width="361" height="128"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="co4-g3-2oE">
-                                                <rect key="frame" x="0.0" y="0.0" width="1280" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1408" height="128"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76f-QH-Mrx">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -423,7 +423,27 @@
                                                             <constraint firstAttribute="bottom" secondItem="znu-2e-6nu" secondAttribute="bottom" id="viw-a9-GlA"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keh-dG-Pt9">
+                                                        <rect key="frame" x="1280" y="0.0" width="128" height="128"/>
+                                                        <subviews>
+                                                            <colorWell contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aq1-2i-JtO">
+                                                                <rect key="frame" x="-0.57776131585342227" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            </colorWell>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="ssz-VJ-qIB"/>
+                                                            <constraint firstAttribute="width" constant="128" id="ygz-Pl-z07"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Keh-dG-Pt9" firstAttribute="leading" secondItem="MK4-LR-EhR" secondAttribute="trailing" id="X4Y-nh-8By"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Keh-dG-Pt9" secondAttribute="trailing" id="ZpV-vU-YYJ"/>
+                                                    <constraint firstItem="Keh-dG-Pt9" firstAttribute="top" secondItem="co4-g3-2oE" secondAttribute="top" id="i1C-I0-8cJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Keh-dG-Pt9" secondAttribute="bottom" id="q1n-t0-CJA"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -870,6 +890,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="PqO-eN-cNV"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="colorWell" destination="aq1-2i-JtO" id="Pdi-z5-eCI"/>
                         <outlet property="emojiLabel" destination="2wy-2Y-p7c" id="RdX-6E-e23"/>
                     </connections>
                 </viewController>
@@ -991,7 +1012,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5156.4885496183206" y="36.619718309859159"/>
+            <point key="canvasLocation" x="4463" y="67"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Uvq-tV-QHI">
@@ -1161,7 +1182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOA-Lg-Buc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788.54961832061065" y="36.619718309859159"/>
+            <point key="canvasLocation" x="589" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A0y-p9-iEf">
@@ -1179,7 +1200,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCB-HM-Bsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138.1679389312977" y="36.619718309859159"/>
+            <point key="canvasLocation" x="-262" y="37"/>
         </scene>
         <!--Task List-->
         <scene sceneID="LfW-Hw-UBR">
@@ -1441,7 +1462,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PR3-md-ngb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4287.7862595419847" y="36.619718309859159"/>
+            <point key="canvasLocation" x="3610" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Xu-m2-udE">

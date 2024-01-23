@@ -62,7 +62,7 @@ class PendingTaskTableViewCell: UITableViewCell {
             taskEmoji.text = task.emoji
             // taskEmoji.backgroundColor = chooseColor("\(task.color)")
             taskName.text = task.title
-            taskCompleted.text = task.isCompleted ? "✅" : "❌"
+            taskCompleted.text = task.isCompleted ? "✅" : ""
             taskCompleted.textColor = .gray
             taskTime.text = "HH:MM AM/PM"
         }
