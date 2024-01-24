@@ -13,11 +13,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var completedTask: UILabel!
     @IBOutlet weak var activityRingImage: UIImageView!
     @IBOutlet weak var calenderButton: UIButton!
-    
+    @IBOutlet weak var progressRingView: UIView!
     /// Data from Model
     var tasks: [Task] = taskDataModel.getAllTasks()
     
     override func viewDidLoad() {
+        /// Create an embed RingProgressView
+//        let ringProgressView = RingProgressView(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
+//        ringProgressView.startColor = .red
+//        ringProgressView.endColor = .magenta
+//        ringProgressView.ringWidth = 25
+//        ringProgressView.progress = 0.0
+//        progressRingView.addSubview(ringProgressView)
+        
         /// Adding padding to Activity Stack View
         activityDetails.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         activityDetails.isLayoutMarginsRelativeArrangement = true

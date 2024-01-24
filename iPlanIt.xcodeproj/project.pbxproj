@@ -12,6 +12,7 @@
 		C8403CCA2B50FCE800CDF949 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */; };
 		C8403CCC2B50FE0200CDF949 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCB2B50FE0200CDF949 /* Task.swift */; };
 		C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */; };
+		C86056782B6140D800801DC8 /* MKRingProgressView in Resources */ = {isa = PBXBuildFile; fileRef = C86056772B6140D800801DC8 /* MKRingProgressView */; };
 		C870E61D2B5643CF00BFA3CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */; };
 		C8AAADA92B5A69440040BD15 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAADA82B5A69440040BD15 /* TaskListViewController.swift */; };
 		C8AAADAB2B5BCC630040BD15 /* AllTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAADAA2B5BCC630040BD15 /* AllTaskTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		C8403CCB2B50FE0200CDF949 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		C86056772B6140D800801DC8 /* MKRingProgressView */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MKRingProgressView; path = Pods/MKRingProgressView; sourceTree = SOURCE_ROOT; };
 		C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C8AAADA82B5A69440040BD15 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		C8AAADAA2B5BCC630040BD15 /* AllTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 				72F5CA726824A6C3FBADD682 /* Pods-iPlanIt.debug.xcconfig */,
 				96A3ABCC368AA17E6C3C7580 /* Pods-iPlanIt.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +144,7 @@
 		C8D3335E2B50F4FE00B3D846 /* iPlanIt */ = {
 			isa = PBXGroup;
 			children = (
+				C86056772B6140D800801DC8 /* MKRingProgressView */,
 				C83ACCAF2B5E77F700558B66 /* Models */,
 				C80F4CEB2B5BF76400099D21 /* EditTask */,
 				C80F4CEA2B5BF75A00099D21 /* TaskList */,
@@ -219,6 +221,7 @@
 			files = (
 				C8D3336C2B50F4FF00B3D846 /* LaunchScreen.storyboard in Resources */,
 				C8D333692B50F4FF00B3D846 /* Assets.xcassets in Resources */,
+				C86056782B6140D800801DC8 /* MKRingProgressView in Resources */,
 				C8D333672B50F4FE00B3D846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
