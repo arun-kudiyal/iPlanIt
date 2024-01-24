@@ -82,7 +82,30 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        let selectedTask = tasks[indexPath.row]
+        if(!selectedTask.isCompleted) {
+            let destinationVC =  self.storyboard?.instantiateViewController(withIdentifier: "Edit Task") as! EditTaskViewController
+            destinationVC.taskName = tasks[indexPath.row].title
+            destinationVC.taskEmoji = tasks[indexPath.row].emoji
+            destinationVC.taskColor = tasks[indexPath.row].color
+            tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        
+            navigationController?.present(destinationVC, animated: true)
+            navigationController?.modalPresentationStyle = .fullScreen
+            navigationController?.modalTransitionStyle = .crossDissolve
+
+            // navigationController?.pushViewController(destinationVC, animated: true)
+        } else {
+            tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        }
+    }
+    
     @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
         taskTableView.reloadData()
     }
+    
+    /// Unwind Segue
+    @IBAction func unwindToAllTask(segue: UIStoryboardSegue) {}
 }

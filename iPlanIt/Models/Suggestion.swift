@@ -17,10 +17,10 @@ class AppSuggestionDataModel {
     init() {
         suggestions.append(Suggestion(id: 1, title: "Groceries", emoji: "🛒", color: "cyan"))
         suggestions.append(Suggestion(id: 2, title: "Salon", emoji: "💇‍♀️", color: "blue"))
-        suggestions.append(Suggestion(id: 2, title: "Salon", emoji: "💇‍♀️", color: "blue"))
-        suggestions.append(Suggestion(id: 3, title: "Meeting", emoji: "💻", color: "red"))
-        suggestions.append(Suggestion(id: 4, title: "Soccer Parctice", emoji: "⚽️", color: "pink"))
-        suggestions.append(Suggestion(id: 5, title: "Meet a Friend", emoji: "☕️", color: "gray"))
+        suggestions.append(Suggestion(id: 3, title: "Watch Movie", emoji: "🎬", color: "blue"))
+        suggestions.append(Suggestion(id: 4, title: "Meeting", emoji: "💻", color: "red"))
+        suggestions.append(Suggestion(id: 5, title: "Soccer Parctice", emoji: "⚽️", color: "pink"))
+        suggestions.append(Suggestion(id: 6, title: "Meet a Friend", emoji: "☕️", color: "gray"))
     }
     
     func getAllSuggestions() -> [Suggestion] { return self.suggestions }

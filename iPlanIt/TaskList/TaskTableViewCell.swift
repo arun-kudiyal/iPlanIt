@@ -4,15 +4,19 @@ import UIKit
 
 /// Apply strike font on text
 extension String {
-  func strikeThrough() -> NSAttributedString {
-    let attributeString = NSMutableAttributedString(string: self)
-    attributeString.addAttribute(
-      NSAttributedString.Key.strikethroughStyle,
-      value: 1,
-      range: NSRange(location: 0, length: attributeString.length))
+    func strikeThrough() -> NSAttributedString {
+        let attributeString = NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSRange(location: 0, length: attributeString.length))
 
-      return attributeString
-     }
+        return attributeString
+    }
+    
+    func unStrikeThrough() -> NSAttributedString {
+        let attributeString = NSMutableAttributedString(string: self)
+        attributeString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributeString.length))
+
+        return attributeString
+    }
 }
 
 class TaskTableViewCell: UITableViewCell {

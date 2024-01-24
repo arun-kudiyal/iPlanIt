@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-iPlanIt/Pods-iPlanIt-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/FLKAutoLayout/FLKAutoLayout.framework
+${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework
+${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

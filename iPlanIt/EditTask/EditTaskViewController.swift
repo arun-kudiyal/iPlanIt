@@ -11,6 +11,28 @@ class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var colorWell: UIColorWell!
+    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var plannedTaskLabel: UITextField!
+    
+    /// Segue Data
+    var taskName: String = ""
+    var taskEmoji: String = ""
+    var taskColor: String = ""
+    
+    /// Helper Function
+    func chooseColor(_ name: String) -> UIColor {
+        switch name {
+            case "cyan": return UIColor.cyan
+            case "gray": return UIColor.gray
+            case "red": return UIColor.red
+            case "blue": return UIColor.blue
+            case "brown":return UIColor.brown
+            case "green": return UIColor.green
+            case "yellow": return UIColor.yellow
+            case "pink": return UIColor.systemPink
+            default : return UIColor.black
+        }
+    }
     
     /// ColorTapGestureRecogbizer
     @IBAction func colorImageTapped(_ sender: UITapGestureRecognizer) {
@@ -51,14 +73,20 @@ class EditTaskViewController: UIViewController {
     
     /// Pick color from Color Well
     func colorWellChanged() {
-        self.colorWell.addTarget(self, action: #selector(colorWellChanged(_:)), for: .valueChanged)
+        self.colorWell?.addTarget(self, action: #selector(colorWellChanged(_:)), for: .valueChanged)
     }
     @objc func colorWellChanged(_ sender: Any) {
         self.emojiLabel.backgroundColor = colorWell.selectedColor
     }
     
-    /// CalenderView Button Tap
     override func viewDidLoad() {
         colorWellChanged()
+        
+        /// Setting default Value if segue is performed
+        emojiLabel?.text = taskEmoji
+        emojiLabel?.backgroundColor = chooseColor("\(taskColor)")
+        plannedTaskLabel?.text = taskName
     }
+    
+    
 }

@@ -27,15 +27,32 @@ class AllTaskTableViewCell: UITableViewCell {
     }
     
     func update(with task: Task) {
-        taskEmoji.text = task.emoji
+        taskEmoji?.text = task.emoji
+        taskTime?.text = "00:00:00 AM|PM"
         taskName.text = task.title
-        taskCompleted.text = task.isCompleted ? "✅" : ""
-        taskTime.text = "HH:MM AM/PM"
-        /// striking the taskName using extension
+        taskCompleted?.text = task.isCompleted ? "✅" : ""
         if(task.isCompleted) {
-            taskName.attributedText = taskName.text?.strikeThrough()
-            taskName.textColor = .gray
-        } else { taskCompleted.textColor = .gray }
+            taskName?.textColor = .gray
+        } else {
+            taskName?.textColor = .black
+        }
+        
+//        if(task.isCompleted) {
+//            taskEmoji.text = task.emoji
+//            taskName.text = task.title
+//            taskCompleted.text = task.isCompleted ? "✅" : ""
+//            /// striking the taskName using extension
+//            taskName.attributedText = taskName.text?.strikeThrough()
+//            taskName.textColor = .gray
+//            taskCompleted.textColor = .gray
+//            taskTime.text = "HH:MM AM/PM"
+//        } else {
+//            taskEmoji.text = task.emoji
+//            taskName.text = task.title
+//            taskCompleted.text = task.isCompleted ? "✅" : ""
+//            taskCompleted.textColor = .gray
+//            taskTime.text = "HH:MM AM/PM"
+//        }
     }
 
 }

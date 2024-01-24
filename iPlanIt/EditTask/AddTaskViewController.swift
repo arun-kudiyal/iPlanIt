@@ -35,20 +35,12 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print(indexPath)
     }
     
     /// Passing Task data to segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is UINavigationController {
-            
-        }
-        /* if let destinationVC = segue.destination as? UINavigationController {
-            print(destinationVC)
-        } else {
-            print("Destination is - \(segue.destination)")
-            // print("Does not work...")
-        } */
+        
     }
     
     /// Unwind Segue
@@ -57,14 +49,14 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        suggestionsTableView.delegate = self
-        suggestionsTableView.dataSource = self
+        suggestionsTableView?.delegate = self
+        suggestionsTableView?.dataSource = self
         
         /// Adding cornerRadius to the emoji & label
-        emojiLabel.layer.masksToBounds = true
-        emojiLabel.layer.cornerRadius = 10.0
+        emojiLabel?.layer.masksToBounds = true
+        emojiLabel?.layer.cornerRadius = 10.0
         
         /// Adding padding to Emoji Label
-        emojiLabel.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        emojiLabel?.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }
