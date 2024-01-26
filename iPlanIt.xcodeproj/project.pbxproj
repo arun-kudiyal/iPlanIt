@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79185999E6F5D91EFF74D549 /* Pods_iPlanIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F96C85DDEACCF98DC50DAB /* Pods_iPlanIt.framework */; };
 		C83ACCB12B5E783600558B66 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83ACCB02B5E783600558B66 /* Suggestion.swift */; };
 		C8403CCA2B50FCE800CDF949 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */; };
 		C8403CCC2B50FE0200CDF949 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCB2B50FE0200CDF949 /* Task.swift */; };
 		C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */; };
-		C86056782B6140D800801DC8 /* MKRingProgressView in Resources */ = {isa = PBXBuildFile; fileRef = C86056772B6140D800801DC8 /* MKRingProgressView */; };
 		C870E61D2B5643CF00BFA3CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */; };
 		C8AAADA92B5A69440040BD15 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAADA82B5A69440040BD15 /* TaskListViewController.swift */; };
 		C8AAADAB2B5BCC630040BD15 /* AllTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAADAA2B5BCC630040BD15 /* AllTaskTableViewCell.swift */; };
@@ -29,14 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		72F5CA726824A6C3FBADD682 /* Pods-iPlanIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlanIt.debug.xcconfig"; path = "Target Support Files/Pods-iPlanIt/Pods-iPlanIt.debug.xcconfig"; sourceTree = "<group>"; };
-		96A3ABCC368AA17E6C3C7580 /* Pods-iPlanIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPlanIt.release.xcconfig"; path = "Target Support Files/Pods-iPlanIt/Pods-iPlanIt.release.xcconfig"; sourceTree = "<group>"; };
-		C4F96C85DDEACCF98DC50DAB /* Pods_iPlanIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPlanIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83ACCB02B5E783600558B66 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		C8403CC92B50FCE800CDF949 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		C8403CCB2B50FE0200CDF949 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C8403CCD2B510A1E00CDF949 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
-		C86056772B6140D800801DC8 /* MKRingProgressView */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MKRingProgressView; path = Pods/MKRingProgressView; sourceTree = SOURCE_ROOT; };
 		C870E61C2B5643CF00BFA3CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C8AAADA82B5A69440040BD15 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		C8AAADAA2B5BCC630040BD15 /* AllTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,30 +53,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79185999E6F5D91EFF74D549 /* Pods_iPlanIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D15B47D0B67313B6750B320 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C4F96C85DDEACCF98DC50DAB /* Pods_iPlanIt.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7F1B8026D4985BC6384EF1FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				72F5CA726824A6C3FBADD682 /* Pods-iPlanIt.debug.xcconfig */,
-				96A3ABCC368AA17E6C3C7580 /* Pods-iPlanIt.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		C80F4CE92B5BF75000099D21 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +104,6 @@
 			children = (
 				C8D3335E2B50F4FE00B3D846 /* iPlanIt */,
 				C8D3335D2B50F4FE00B3D846 /* Products */,
-				7F1B8026D4985BC6384EF1FB /* Pods */,
-				4D15B47D0B67313B6750B320 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +118,6 @@
 		C8D3335E2B50F4FE00B3D846 /* iPlanIt */ = {
 			isa = PBXGroup;
 			children = (
-				C86056772B6140D800801DC8 /* MKRingProgressView */,
 				C83ACCAF2B5E77F700558B66 /* Models */,
 				C80F4CEB2B5BF76400099D21 /* EditTask */,
 				C80F4CEA2B5BF75A00099D21 /* TaskList */,
@@ -166,11 +139,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8D333702B50F4FF00B3D846 /* Build configuration list for PBXNativeTarget "iPlanIt" */;
 			buildPhases = (
-				5468E68C1BCD371B593810E9 /* [CP] Check Pods Manifest.lock */,
 				C8D333582B50F4FE00B3D846 /* Sources */,
 				C8D333592B50F4FE00B3D846 /* Frameworks */,
 				C8D3335A2B50F4FE00B3D846 /* Resources */,
-				DB7A74ED0CD745BC97E0EE65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,54 +192,11 @@
 			files = (
 				C8D3336C2B50F4FF00B3D846 /* LaunchScreen.storyboard in Resources */,
 				C8D333692B50F4FF00B3D846 /* Assets.xcassets in Resources */,
-				C86056782B6140D800801DC8 /* MKRingProgressView in Resources */,
 				C8D333672B50F4FE00B3D846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5468E68C1BCD371B593810E9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iPlanIt-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB7A74ED0CD745BC97E0EE65 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iPlanIt/Pods-iPlanIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iPlanIt/Pods-iPlanIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPlanIt/Pods-iPlanIt-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8D333582B50F4FE00B3D846 /* Sources */ = {
@@ -435,7 +363,6 @@
 		};
 		C8D333712B50F4FF00B3D846 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72F5CA726824A6C3FBADD682 /* Pods-iPlanIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,7 +391,6 @@
 		};
 		C8D333722B50F4FF00B3D846 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96A3ABCC368AA17E6C3C7580 /* Pods-iPlanIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

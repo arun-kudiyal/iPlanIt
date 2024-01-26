@@ -6,43 +6,42 @@
 //
 
 import UIKit
+import HealthKitUI
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var activityDetails: UIStackView!
     @IBOutlet weak var completedTask: UILabel!
-    @IBOutlet weak var activityRingImage: UIImageView!
     @IBOutlet weak var calenderButton: UIButton!
     @IBOutlet weak var progressRingView: UIView!
+    
     /// Data from Model
-    var tasks: [Task] = taskDataModel.getAllTasks()
+    let compledTasks: Double = Double(AppTaskDataModel().getAllTasks().filter({$0.isCompleted}).count)
+    let totalTasks: Double = Double(AppTaskDataModel().getAllTasks().count)
     
     override func viewDidLoad() {
-        /// Create an embed RingProgressView
-//        let ringProgressView = RingProgressView(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
-//        ringProgressView.startColor = .red
-//        ringProgressView.endColor = .magenta
-//        ringProgressView.ringWidth = 25
-//        ringProgressView.progress = 0.0
-//        progressRingView.addSubview(ringProgressView)
+        /// Create ActivityRingView
+        let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
+        let summary = HKActivitySummary();
+        
+        /// Creating Rring (Red)
+        summary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalTasks);
+        summary.activeEnergyBurned = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: compledTasks);
+        
+        /// Set the activity summary
+        view.setActivitySummary(summary, animated: true)
+        
+        progressRingView.addSubview(view)
         
         /// Adding padding to Activity Stack View
         activityDetails.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         activityDetails.isLayoutMarginsRelativeArrangement = true
         /// Respond to tap gesture
-        activityRingImage.isUserInteractionEnabled = true
-        activityRingImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
+        progressRingView.isUserInteractionEnabled = true
+        progressRingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
         /// Adding calender icon from SFSymbols
         calenderButton.setImage(UIImage(systemName: "calendar"), for: .normal)
         calenderButton.tintColor = .black
-        
-        
-        /// View Calculations
-        var completedTasksCount = tasks.filter({$0.isCompleted}).count
-        var pendingTasksCount = tasks.filter({!$0.isCompleted}).count
-        print("Completed Tasks \(completedTasksCount) | Pending Taks \(pendingTasksCount)")
-        var percentageCompleted: Double = (Double(completedTasksCount) / Double(tasks.count)) * 100.0
-        print(percentageCompleted)
     }
     
     /// Image Tap Handler Function
