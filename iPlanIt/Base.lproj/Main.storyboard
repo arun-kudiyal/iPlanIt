@@ -1174,6 +1174,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="msh-K5-IUM" kind="presentation" id="u8z-9V-IeM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k7I-IW-LdN"/>
@@ -1210,7 +1213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOA-Lg-Buc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="-695"/>
+            <point key="canvasLocation" x="602" y="-695"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A0y-p9-iEf">
@@ -1229,6 +1232,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCB-HM-Bsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-291" y="-695"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="GVM-u3-HKy">
+            <objects>
+                <viewController id="msh-K5-IUM" customClass="CalendarViewController" customModule="iPlanIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="64d-04-5Sy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-90-NMz">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b10-dV-3ly"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b10-dV-3ly" firstAttribute="bottom" secondItem="pcd-90-NMz" secondAttribute="bottom" id="3fD-pw-txy"/>
+                            <constraint firstItem="pcd-90-NMz" firstAttribute="top" secondItem="b10-dV-3ly" secondAttribute="top" id="OFf-dw-rFi"/>
+                            <constraint firstItem="pcd-90-NMz" firstAttribute="leading" secondItem="b10-dV-3ly" secondAttribute="leading" id="WfD-je-2qw"/>
+                            <constraint firstItem="b10-dV-3ly" firstAttribute="trailing" secondItem="pcd-90-NMz" secondAttribute="trailing" id="gDV-Gr-HBg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Et7-Mq-bx0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGf-vK-q0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="-1515"/>
         </scene>
         <!--Task List-->
         <scene sceneID="LfW-Hw-UBR">

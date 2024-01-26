@@ -24,6 +24,7 @@
 		C8D333672B50F4FE00B3D846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D333652B50F4FE00B3D846 /* Main.storyboard */; };
 		C8D333692B50F4FF00B3D846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D333682B50F4FF00B3D846 /* Assets.xcassets */; };
 		C8D3336C2B50F4FF00B3D846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D3336A2B50F4FF00B3D846 /* LaunchScreen.storyboard */; };
+		C8FE1A8A2B64006A00F975C4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE1A892B64006A00F975C4 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C8D333682B50F4FF00B3D846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D3336B2B50F4FF00B3D846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D3336D2B50F4FF00B3D846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8FE1A892B64006A00F975C4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		C8D3335E2B50F4FE00B3D846 /* iPlanIt */ = {
 			isa = PBXGroup;
 			children = (
+				C8FE1A882B64004F00F975C4 /* Calendar View */,
 				C83ACCAF2B5E77F700558B66 /* Models */,
 				C80F4CEB2B5BF76400099D21 /* EditTask */,
 				C80F4CEA2B5BF75A00099D21 /* TaskList */,
@@ -130,6 +133,14 @@
 				C8D3336D2B50F4FF00B3D846 /* Info.plist */,
 			);
 			path = iPlanIt;
+			sourceTree = "<group>";
+		};
+		C8FE1A882B64004F00F975C4 /* Calendar View */ = {
+			isa = PBXGroup;
+			children = (
+				C8FE1A892B64006A00F975C4 /* CalendarViewController.swift */,
+			);
+			path = "Calendar View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FE1A8A2B64006A00F975C4 /* CalendarViewController.swift in Sources */,
 				C8AAADAD2B5BCC7E0040BD15 /* CompletedTaskTableViewCell.swift in Sources */,
 				C8BF45E72B5A493800B01E6A /* EditTaskViewController.swift in Sources */,
 				C8D333602B50F4FE00B3D846 /* AppDelegate.swift in Sources */,
