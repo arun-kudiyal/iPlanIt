@@ -21,7 +21,7 @@ class AllTaskTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: false)
 
         // Configure the view for the selected state
     }
@@ -36,23 +36,6 @@ class AllTaskTableViewCell: UITableViewCell {
         } else {
             taskName?.textColor = .black
         }
-        
-//        if(task.isCompleted) {
-//            taskEmoji.text = task.emoji
-//            taskName.text = task.title
-//            taskCompleted.text = task.isCompleted ? "✅" : ""
-//            /// striking the taskName using extension
-//            taskName.attributedText = taskName.text?.strikeThrough()
-//            taskName.textColor = .gray
-//            taskCompleted.textColor = .gray
-//            taskTime.text = "HH:MM AM/PM"
-//        } else {
-//            taskEmoji.text = task.emoji
-//            taskName.text = task.title
-//            taskCompleted.text = task.isCompleted ? "✅" : ""
-//            taskCompleted.textColor = .gray
-//            taskTime.text = "HH:MM AM/PM"
-//        }
     }
 
 }
