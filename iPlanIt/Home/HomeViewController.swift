@@ -34,8 +34,12 @@ class HomeViewController: UIViewController {
         progressRingView.addSubview(view)
         
         /// Adding padding to Activity Stack View
-        activityDetails.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        activityDetails.layoutMargins = UIEdgeInsets(top: 25, left: 10, bottom: 25, right: 10)
         activityDetails.isLayoutMarginsRelativeArrangement = true
+        
+        /// Activity Stack View corner radius
+        activityDetails.layer.cornerRadius = 10
+        
         /// Respond to tap gesture
         progressRingView.isUserInteractionEnabled = true
         progressRingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTap)))
