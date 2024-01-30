@@ -1062,7 +1062,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B56-rz-FO3">
-                                <rect key="frame" x="20" y="177" width="353" height="300"/>
+                                <rect key="frame" x="55" y="177" width="318" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="EoR-hI-mpv"/>
@@ -1193,8 +1193,7 @@
                             <constraint firstItem="k7I-IW-LdN" firstAttribute="trailing" secondItem="xui-8c-MLw" secondAttribute="trailing" constant="20" id="U4T-80-sfd"/>
                             <constraint firstItem="k7I-IW-LdN" firstAttribute="bottom" secondItem="tZf-ci-LgL" secondAttribute="bottom" constant="20" id="Xqu-s4-iyB"/>
                             <constraint firstItem="k7I-IW-LdN" firstAttribute="trailing" secondItem="6Fy-u9-ipK" secondAttribute="trailing" constant="20" id="c3J-3j-vuk"/>
-                            <constraint firstItem="B56-rz-FO3" firstAttribute="leading" secondItem="k7I-IW-LdN" secondAttribute="leading" constant="20" id="l6n-Qw-JB9"/>
-                            <constraint firstItem="B56-rz-FO3" firstAttribute="centerX" secondItem="fMn-CO-6dh" secondAttribute="centerX" id="oID-Dg-8wv"/>
+                            <constraint firstItem="B56-rz-FO3" firstAttribute="leading" secondItem="k7I-IW-LdN" secondAttribute="leading" constant="55" id="l6n-Qw-JB9"/>
                             <constraint firstItem="ahP-qP-PTc" firstAttribute="trailing" secondItem="k7I-IW-LdN" secondAttribute="trailing" id="okP-sl-636"/>
                             <constraint firstItem="tZf-ci-LgL" firstAttribute="leading" secondItem="k7I-IW-LdN" secondAttribute="leading" constant="20" id="pQA-SN-XOg"/>
                             <constraint firstItem="ahP-qP-PTc" firstAttribute="leading" secondItem="k7I-IW-LdN" secondAttribute="leading" id="rFG-ks-k8p"/>
@@ -1580,7 +1579,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
