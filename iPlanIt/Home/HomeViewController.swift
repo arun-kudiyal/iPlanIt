@@ -8,18 +8,36 @@
 import UIKit
 import HealthKitUI
 
+extension Date {
+    static func getCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        return dateFormatter.string(from: Date())
+    }
+}
+
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var activityDetails: UIStackView!
     @IBOutlet weak var completedTask: UILabel!
     @IBOutlet weak var calenderButton: UIButton!
     @IBOutlet weak var progressRingView: UIView!
+    @IBOutlet weak var currentDate: UILabel!
+    
+    
+    @IBOutlet weak var completedTaskLabel: UILabel!
+    @IBOutlet weak var ongoingTaskLabel: UILabel!
+    @IBOutlet weak var upcomingTaskLabel: UILabel!
     
     /// Data from Model
     let compledTasks: Double = Double(AppTaskDataModel().getAllTasks().filter({$0.isCompleted}).count)
     let totalTasks: Double = Double(AppTaskDataModel().getAllTasks().count)
     
     override func viewDidLoad() {
+        /// Setting current date
+        let today = Date.getCurrentDate()
+        currentDate?.text = today
+        
         /// Create ActivityRingView
         let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
         let summary = HKActivitySummary();
@@ -46,6 +64,14 @@ class HomeViewController: UIViewController {
         /// Adding calender icon from SFSymbols
         calenderButton.setImage(UIImage(systemName: "calendar"), for: .normal)
         calenderButton.tintColor = .black
+        
+        // MARK: - Changing the Activity Details
+        let tasks = AppTaskDataModel().getAllTasks()
+        let completedTasksCount = tasks.filter({$0.isCompleted}).count
+        
+        completedTaskLabel?.text = "⭐️ \(completedTasksCount)/\(tasks.count) Tasks Completed"
+        ongoingTaskLabel?.text = "\(tasks[0].emoji) \(tasks[0].title)"
+        upcomingTaskLabel?.text = "\(tasks[1].emoji) \(tasks[1].title)"
     }
     
     /// Image Tap Handler Function
@@ -55,5 +81,4 @@ class HomeViewController: UIViewController {
     
         navigationController?.pushViewController(destinationVC, animated: true)
     }
-
 }

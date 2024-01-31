@@ -11,13 +11,22 @@ class EditTaskViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var colorWell: UIColorWell!
-    @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var plannedTaskLabel: UITextField!
+    
+    var taskList: TaskListViewController!
     
     /// Segue Data
     var taskName: String = ""
     var taskEmoji: String = ""
     var taskColor: String = ""
+    
+    /// Form Outlets
+    @IBOutlet weak var taskDate: UIDatePicker!
+    @IBOutlet weak var taskTime: UIDatePicker!
+    
+    @IBOutlet weak var breakStartTime: UIDatePicker!
+    @IBOutlet weak var breakEndTime: UIDatePicker!
+    @IBOutlet weak var meditationRequired: UISwitch!
     
     /// Helper Function
     func chooseColor(_ name: String) -> UIColor {
@@ -88,5 +97,14 @@ class EditTaskViewController: UIViewController {
         plannedTaskLabel?.text = taskName
     }
     
-    
+    @IBAction func doneAction(_ sender: Any) {
+        /* print(emojiLabel?.text)
+        print(plannedTaskLabel?.text)
+        print(taskDate?.date)
+        print(taskTime?.timeZone)
+        print(meditationRequired?.isOn) */
+        
+        print("Done Button Tapped!")
+        self.dismiss(animated: true, completion: nil)
+    }
 }

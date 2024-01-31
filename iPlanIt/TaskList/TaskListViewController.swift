@@ -108,4 +108,10 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     
     /// Unwind Segue
     @IBAction func unwindToAllTask(segue: UIStoryboardSegue) {}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editVC = segue.destination as? EditTaskViewController {
+            editVC.taskList = self
+        }
+    }
 }
