@@ -27,6 +27,7 @@ class EditTaskViewController: UIViewController {
     @IBOutlet weak var breakStartTime: UIDatePicker!
     @IBOutlet weak var breakEndTime: UIDatePicker!
     @IBOutlet weak var meditationRequired: UISwitch!
+    @IBOutlet weak var taskResources: UITextField!
     
     /// Helper Function
     func chooseColor(_ name: String) -> UIColor {
@@ -80,6 +81,11 @@ class EditTaskViewController: UIViewController {
         }
     }
     
+    /// Hiding the keyboard on return key
+    @IBAction func returnPressed(_ sender: UITextField) {
+            sender.resignFirstResponder()
+        }
+    
     /// Pick color from Color Well
     func colorWellChanged() {
         self.colorWell?.addTarget(self, action: #selector(colorWellChanged(_:)), for: .valueChanged)
@@ -98,13 +104,36 @@ class EditTaskViewController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: Any) {
-        /* print(emojiLabel?.text)
-        print(plannedTaskLabel?.text)
-        print(taskDate?.date)
-        print(taskTime?.timeZone)
-        print(meditationRequired?.isOn) */
+        let taskDateSelected = taskDate.date
+        let taskTimeSelected = taskTime.date
+        let breakStartTimeSelected = breakStartTime.date
+        let breakEndTimeSelected = breakEndTime.date
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let formattedTaskDate = dateFormatter.string(from: taskDateSelected)
+        
+        dateFormatter.dateFormat = "HH:mm"
+        let formattedTaskTime = dateFormatter.string(from: taskTimeSelected)
+        let formattedBreakStartTime = dateFormatter.string(from: breakStartTimeSelected)
+        let formattedBreakEndTime = dateFormatter.string(from: breakEndTimeSelected)
+        
+        let taskEmojiSelected = emojiLabel.text
+        let taskTitle = plannedTaskLabel.text
+        
+        let wantMeditation = meditationRequired.isOn
+        let addedResources = taskResources.text
+        
+        let addedTask: [String:String] = ["tasTitle": taskTitle!, "taskEmoji": taskEmojiSelected!, "taskDate": formattedTaskDate, "taskTime": formattedTaskTime, "breakStartTime": formattedBreakStartTime, "breakEndTime": formattedBreakEndTime, "meditation": String(wantMeditation), "resources": addedResources!]
         
         print("Done Button Tapped!")
+        print(addedTask)
+        
+        
+        /// SENDING POST REQUEST TO API
+        
+        
         self.dismiss(animated: true, completion: nil)
+        
     }
 }

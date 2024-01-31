@@ -19,11 +19,11 @@ class PendingTaskTableViewCell: UITableViewCell {
         // Initialization code
         /// Adding padding to Emoji Label
         taskEmoji.layoutMargins = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
-        taskEmoji.backgroundColor = UIColor(cgColor: chooseColor("green"))
+        // taskEmoji.backgroundColor = UIColor(cgColor: chooseColor("green"))
     }
     
     /// Add a circle on the UILabel
-    func drawCircle(_ name: String) {
+    /* func drawCircle(_ name: String) {
         let size:CGFloat = 55.0
         taskEmoji.textColor = UIColor.white
         taskEmoji.textAlignment = .center
@@ -33,7 +33,7 @@ class PendingTaskTableViewCell: UITableViewCell {
         taskEmoji.layer.borderWidth = 1.0
         taskEmoji.layer.backgroundColor = UIColor.orange.cgColor
         taskEmoji.layer.borderColor = UIColor.orange.cgColor
-    }
+    } */
     
     /// Adds a named color
     func chooseColor(_ name: String) -> CGColor {

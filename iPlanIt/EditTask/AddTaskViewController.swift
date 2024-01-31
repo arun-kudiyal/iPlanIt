@@ -35,8 +35,22 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        let suggestion = suggestions[indexPath.row]
+        let destinationVC =  self.storyboard?.instantiateViewController(withIdentifier: "Edit Task") as! EditTaskViewController
+        destinationVC.taskName = suggestion.title
+        destinationVC.taskEmoji = suggestion.emoji
+        destinationVC.taskColor = suggestion.color
+        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+        
+        navigationController?.present(destinationVC, animated: true)
+        navigationController?.modalPresentationStyle = .fullScreen
+        navigationController?.modalTransitionStyle = .crossDissolve
     }
+    
+    /* func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    } */
     
     /// Passing Task data to segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,6 +59,10 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     /// Unwind Segue
     @IBAction func unwindToAddTask(segue: UIStoryboardSegue) {}
+    
+    @IBAction func returnPressed(_ sender: UITextField) {
+            sender.resignFirstResponder()
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

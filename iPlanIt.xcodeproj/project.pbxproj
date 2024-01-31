@@ -24,6 +24,7 @@
 		C8D333672B50F4FE00B3D846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D333652B50F4FE00B3D846 /* Main.storyboard */; };
 		C8D333692B50F4FF00B3D846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D333682B50F4FF00B3D846 /* Assets.xcassets */; };
 		C8D3336C2B50F4FF00B3D846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D3336A2B50F4FF00B3D846 /* LaunchScreen.storyboard */; };
+		C8F6CA9B2B6A052B00198D7F /* ManageTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6CA9A2B6A052B00198D7F /* ManageTaskViewController.swift */; };
 		C8FE1A8A2B64006A00F975C4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FE1A892B64006A00F975C4 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		C8D333682B50F4FF00B3D846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D3336B2B50F4FF00B3D846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D3336D2B50F4FF00B3D846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F6CA9A2B6A052B00198D7F /* ManageTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTaskViewController.swift; sourceTree = "<group>"; };
 		C8FE1A892B64006A00F975C4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C8FE1A882B64004F00F975C4 /* Calendar View */,
+				C8F6CA9C2B6A053600198D7F /* ManageTask */,
 				C83ACCAF2B5E77F700558B66 /* Models */,
 				C80F4CEB2B5BF76400099D21 /* EditTask */,
 				C80F4CEA2B5BF75A00099D21 /* TaskList */,
@@ -133,6 +136,14 @@
 				C8D3336D2B50F4FF00B3D846 /* Info.plist */,
 			);
 			path = iPlanIt;
+			sourceTree = "<group>";
+		};
+		C8F6CA9C2B6A053600198D7F /* ManageTask */ = {
+			isa = PBXGroup;
+			children = (
+				C8F6CA9A2B6A052B00198D7F /* ManageTaskViewController.swift */,
+			);
+			path = ManageTask;
 			sourceTree = "<group>";
 		};
 		C8FE1A882B64004F00F975C4 /* Calendar View */ = {
@@ -218,6 +229,7 @@
 				C8AAADAD2B5BCC7E0040BD15 /* CompletedTaskTableViewCell.swift in Sources */,
 				C8BF45E72B5A493800B01E6A /* EditTaskViewController.swift in Sources */,
 				C8D333602B50F4FE00B3D846 /* AppDelegate.swift in Sources */,
+				C8F6CA9B2B6A052B00198D7F /* ManageTaskViewController.swift in Sources */,
 				C8BF45E32B58F1AA00B01E6A /* AddTaskTableViewCell.swift in Sources */,
 				C8403CCE2B510A1E00CDF949 /* TaskTableViewCell.swift in Sources */,
 				C83ACCB12B5E783600558B66 /* Suggestion.swift in Sources */,
