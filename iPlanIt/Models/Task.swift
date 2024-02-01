@@ -1,43 +1,66 @@
 import UIKit
 struct Task {
-    var id: Int
+    var id: UUID
     var title: String
-    var time: Date
     var emoji: String
+    var time: String
+    var date: String
+    var includeBreak: Bool
+    var breakStartTime: String
+    var breakEndTime: String
+    var meditation: Bool
+    var resources: String
     var isCompleted: Bool
-    var color: String
-    init(id: Int, title: String, time: Date, emoji: String, isCompleted: Bool, color: String) {
+    init(id: UUID, title: String, emoji: String, time: String, date: String, includeBreak: Bool, breakStartTime: String, breakEndTime: String, meditation: Bool, resources: String, isCompleted: Bool) {
         self.id = id
         self.title = title
-        self.time = time
         self.emoji = emoji
+        self.time = time
+        self.date = date
+        self.includeBreak = includeBreak
+        self.breakStartTime = breakStartTime
+        self.breakEndTime = breakEndTime
+        self.meditation = meditation
+        self.resources = resources
         self.isCompleted = isCompleted
-        self.color = color
     }
 }
 
 class AppTaskDataModel {
-    private var tasks: [Task] = []
+    var tasks: [Task] = []
     /// Sample Task Data
     init() {
-        tasks.append(Task(id:1, title: "Salon", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "💇‍♀️", isCompleted: true, color: "yellow"))
-        tasks.append(Task(id:2, title: "Groceries", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🛒", isCompleted: false, color: "blue"))
-        tasks.append(Task(id:3, title: "Coffee Meeting", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "☕️", isCompleted: false, color: "green"))
-        tasks.append(Task(id: 4, title: "Gym", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"))
-        tasks.append(Task(id: 5, title: "Lunch", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: false, color: "blue"))
-        tasks.append(Task(id: 6, title: "Watch Movie", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🎬", isCompleted: true, color: "blue"))
-        tasks.append(Task(id: 7, title: "Soccer Practice", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "⚽️", isCompleted: false, color: "green"))
-        tasks.append(Task(id: 8, title: "Lectures", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "💻", isCompleted: false, color: "green"))
-        tasks.append(Task(id: 9, title: "Check For Emails", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "📧", isCompleted: true, color: "blue"))
-        tasks.append(Task(id: 10, title: "Take Meds", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "💊", isCompleted: false, color: "blue"))
-        tasks.append(Task(id: 11, title: "Quick Run", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🏃", isCompleted: false, color: "blue"))
+        tasks.append( Task(id: UUID(), title: "Salon", emoji: "💇‍♀️",  time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "", isCompleted: true ) )
+        
+        tasks.append(Task(id: UUID(), title: "Groceries", emoji: "🛒", time: "7:11 PM", date: "2024-01-31", includeBreak: true, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: false))
+        
+        tasks.append(Task(id: UUID(), title: "Coffee Meeting", emoji: "☕️", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: true, resources: "7:11 PM", isCompleted: false))
+        
+        tasks.append(Task(id: UUID(), title: "Gym", emoji: "🏋️", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "", isCompleted: true))
+        
+        tasks.append(Task(id: UUID(), title: "Lunch", emoji: "🍔", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "", isCompleted: false))
+        
+        tasks.append(Task(id: UUID(), title: "Watch Movie", emoji: "🎬", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: true))
+        
+        tasks.append(Task(id: UUID(), title: "Soccer Practice", emoji: "⚽️", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: false))
+        
+        tasks.append(Task(id: UUID(), title: "Lectures", emoji: "💻", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "", isCompleted: false))
+        
+        tasks.append(Task(id: UUID(), title: "Check For Emails", emoji: "📧", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: true))
+        
+        tasks.append(Task(id:  UUID(), title: "Take Meds", emoji: "💊", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: false))
+        
+        tasks.append(Task(id:  UUID(), title: "Quick Run", emoji: "🏃", time: "7:11 PM", date: "2024-01-31", includeBreak: false, breakStartTime: "7:11 PM", breakEndTime:"7:11 PM", meditation: false, resources: "7:11 PM", isCompleted: false))
     }
     
     func getAllTasks() -> [Task] { return self.tasks }
     
-    func addTask(task: Task) { self.tasks.append(task) }
+    func addTask(task: Task) {
+        self.tasks.append(task)
+    }
     
-    func getTaskById(id: Int) -> Task { self.tasks.filter({$0.id == id})[0] }
+    func getTaskById(id: UUID) -> Task { self.tasks.filter({ $0.id.uuidString == id.uuidString })[0] }
+
 }
 
 var taskDataModel = AppTaskDataModel()

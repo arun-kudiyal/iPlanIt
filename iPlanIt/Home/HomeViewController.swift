@@ -30,8 +30,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var upcomingTaskLabel: UILabel!
     
     /// Data from Model
-    let compledTasks: Double = Double(AppTaskDataModel().getAllTasks().filter({$0.isCompleted}).count)
-    let totalTasks: Double = Double(AppTaskDataModel().getAllTasks().count)
+    let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)
+    let totalTasks: Double = Double(taskDataModel.getAllTasks().count)
     
     override func viewDidLoad() {
         /// Setting current date
@@ -41,6 +41,10 @@ class HomeViewController: UIViewController {
         /// Create ActivityRingView
         let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
         let summary = HKActivitySummary();
+        
+        /// Creating Rring (Green)
+        // summary.appleExerciseTime = HKQuantity(unit: HKUnit.hour(), doubleValue: compledTasks);
+        // summary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.hour(), doubleValue: totalTasks);
         
         /// Creating Rring (Red)
         summary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalTasks);

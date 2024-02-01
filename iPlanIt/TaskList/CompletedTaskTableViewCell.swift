@@ -34,7 +34,7 @@ class CompletedTaskTableViewCell: UITableViewCell {
             taskName.attributedText = taskName.text?.strikeThrough()
             taskName.textColor = .gray
             taskCompleted.textColor = .gray
-            taskTime.text = "HH:MM AM/PM"
+            taskTime.text = task.time
         }
     }
 

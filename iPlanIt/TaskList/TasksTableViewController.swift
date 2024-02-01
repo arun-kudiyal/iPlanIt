@@ -9,11 +9,11 @@ import UIKit
 
 class TasksTableViewController: UITableViewController {
     /// Demo Tasks
-    var tasks = [
+    /* var tasks = [
         Task(id:1, title: "Task - 1", time: Date(timeIntervalSinceReferenceDate: 1), emoji: "🏋️", isCompleted: true, color: "yellow"),
         Task(id:2, title: "Task - 2", time: Date(timeIntervalSinceReferenceDate: 3), emoji: "🍔", isCompleted: true, color: "blue"),
         Task(id:3, title: "Task - 3", time: Date(timeIntervalSinceReferenceDate: 5), emoji: "🛍️", isCompleted: false, color: "green")
-    ]
+    ] */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,14 @@ class TasksTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        let tasks = AppTaskDataModel().getAllTasks()
         return tasks.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
+        
+        let tasks = AppTaskDataModel().getAllTasks()
         let task = tasks[indexPath.row]
         
         if(task.isCompleted == true) { cell.accessoryType = .none }

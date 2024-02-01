@@ -14,6 +14,8 @@ class PendingTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var taskTime: UILabel!
     @IBOutlet weak var taskCompleted: UILabel!
     
+    var tasks = taskDataModel.getAllTasks()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -64,7 +66,6 @@ class PendingTaskTableViewCell: UITableViewCell {
             taskName.text = task.title
             taskCompleted.text = task.isCompleted ? "✅" : ""
             taskCompleted.textColor = .gray
-            taskTime.text = "HH:MM AM/PM"
+            taskTime.text = task.time
         }
-    }
-}
+    }}

@@ -28,7 +28,7 @@ class AllTaskTableViewCell: UITableViewCell {
     
     func update(with task: Task) {
         taskEmoji?.text = task.emoji
-        taskTime?.text = "00:00:00 AM|PM"
+        taskTime?.text = task.time
         taskName.text = task.title
         taskCompleted?.text = task.isCompleted ? "✅" : ""
         if(task.isCompleted) {

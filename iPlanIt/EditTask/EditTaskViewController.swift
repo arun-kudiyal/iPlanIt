@@ -12,6 +12,9 @@ class EditTaskViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var colorWell: UIColorWell!
     @IBOutlet weak var plannedTaskLabel: UITextField!
+    @IBOutlet weak var breakView: UIStackView!
+    @IBOutlet weak var breakSwitch: UISwitch!
+    @IBOutlet weak var meditationView: UIStackView!
     
     var taskList: TaskListViewController!
     
@@ -103,7 +106,14 @@ class EditTaskViewController: UIViewController {
         plannedTaskLabel?.text = taskName
     }
     
-    @IBAction func doneAction(_ sender: Any) {
+    @objc func cancelButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "DoneSegue" else { return }
+        
         let taskDateSelected = taskDate.date
         let taskTimeSelected = taskTime.date
         let breakStartTimeSelected = breakStartTime.date
@@ -118,22 +128,21 @@ class EditTaskViewController: UIViewController {
         let formattedBreakStartTime = dateFormatter.string(from: breakStartTimeSelected)
         let formattedBreakEndTime = dateFormatter.string(from: breakEndTimeSelected)
         
-        let taskEmojiSelected = emojiLabel.text
         let taskTitle = plannedTaskLabel.text
+        guard let addedResources = taskResources.text else { return }
         
-        let wantMeditation = meditationRequired.isOn
-        let addedResources = taskResources.text
+        let addedTask: Task = Task(id: UUID(), title: taskTitle!, emoji: emojiLabel!.text!, time: formattedTaskTime, date: formattedTaskDate, includeBreak: breakSwitch.isOn, breakStartTime: formattedBreakStartTime, breakEndTime: formattedBreakEndTime, meditation: meditationRequired.isOn, resources: addedResources, isCompleted: false)
         
-        let addedTask: [String:String] = ["tasTitle": taskTitle!, "taskEmoji": taskEmojiSelected!, "taskDate": formattedTaskDate, "taskTime": formattedTaskTime, "breakStartTime": formattedBreakStartTime, "breakEndTime": formattedBreakEndTime, "meditation": String(wantMeditation), "resources": addedResources!]
-        
-        print("Done Button Tapped!")
-        print(addedTask)
-        
-        
-        /// SENDING POST REQUEST TO API
-        
-        
-        self.dismiss(animated: true, completion: nil)
-        
+        taskDataModel.addTask(task: addedTask)
+    }
+    
+    @IBAction func breakSwitchTapped(_ sender: Any) {
+        if(breakSwitch.isOn) {
+            breakView.alpha = 1.0
+            meditationView.alpha = 1.0
+        } else {
+            breakView.alpha = 0.5
+            meditationView.alpha = 0.5
+        }
     }
 }

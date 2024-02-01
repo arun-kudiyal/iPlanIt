@@ -33,12 +33,16 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         taskTableView.reloadData()
     }
- 
+    
+    override func didMove(toParent parent: UIViewController?) {
+        taskTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch taskSegmentControl.selectedSegmentIndex {
-        case 0: return self.tasks.count
+        case 0: return self.pendingTaks.count
         case 1: return self.completedTasks.count
-        case 2: return self.pendingTaks.count
+        case 2: return self.tasks.count
         default: return 1
         }
     }
@@ -46,15 +50,13 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch taskSegmentControl.selectedSegmentIndex {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AllTaskCell", for: indexPath) as! AllTaskTableViewCell
-            let task = tasks[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTaskCell", for: indexPath) as! PendingTaskTableViewCell
             
-            if(task.isCompleted == true) { cell.accessoryType = .none }
-            else { cell.accessoryType = .disclosureIndicator }
+            let task = pendingTaks[indexPath.row]
             
             cell.update(with: task)
             cell.showsReorderControl = true
-
+            
             return cell
             
         case 1:
@@ -65,17 +67,19 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
             
             cell.update(with: task)
             cell.showsReorderControl = true
-
+            
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTaskCell", for: indexPath) as! PendingTaskTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AllTaskCell", for: indexPath) as! AllTaskTableViewCell
+            let task = tasks[indexPath.row]
             
-            let task = pendingTaks[indexPath.row]
+            if(task.isCompleted == true) { cell.accessoryType = .none }
+            else { cell.accessoryType = .disclosureIndicator }
             
             cell.update(with: task)
             cell.showsReorderControl = true
-
+            
             return cell
             
         default: return UITableViewCell()
@@ -83,22 +87,37 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.selectionStyle = .none
-        let selectedTask = tasks[indexPath.row]
-        if(!selectedTask.isCompleted) {
-            let destinationVC =  self.storyboard?.instantiateViewController(withIdentifier: "Edit Task") as! EditTaskViewController
-            destinationVC.taskName = tasks[indexPath.row].title
-            destinationVC.taskEmoji = tasks[indexPath.row].emoji
-            destinationVC.taskColor = tasks[indexPath.row].color
+        switch taskSegmentControl.selectedSegmentIndex {
+        case 0:
             tableView.cellForRow(at: indexPath)?.selectionStyle = .none
-        
-            navigationController?.present(destinationVC, animated: true)
-            navigationController?.modalPresentationStyle = .fullScreen
-            navigationController?.modalTransitionStyle = .crossDissolve
-
-            // navigationController?.pushViewController(destinationVC, animated: true)
-        } else {
+            let selectedTask = pendingTaks[indexPath.row]
+            if(!selectedTask.isCompleted) {
+                let destinationVC =  self.storyboard?.instantiateViewController(withIdentifier: "Edit Task") as! EditTaskViewController
+                destinationVC.taskName = tasks[indexPath.row].title
+                destinationVC.taskEmoji = tasks[indexPath.row].emoji
+                tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+                navigationController?.pushViewController(destinationVC, animated: true)
+            } else {
+                tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+            }
+            break
+        case 1:
             tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+            break
+        case 2:
+            tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+            let selectedTask = tasks.filter({!$0.isCompleted})[indexPath.row]
+            if(!selectedTask.isCompleted) {
+                let destinationVC =  self.storyboard?.instantiateViewController(withIdentifier: "Edit Task") as! EditTaskViewController
+                destinationVC.taskName = tasks[indexPath.row].title
+                destinationVC.taskEmoji = tasks[indexPath.row].emoji
+                tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+                navigationController?.pushViewController(destinationVC, animated: true)
+            } else {
+                tableView.cellForRow(at: indexPath)?.selectionStyle = .none
+            }
+            break
+        default: break
         }
     }
     
@@ -107,11 +126,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     /// Unwind Segue
-    @IBAction func unwindToAllTask(segue: UIStoryboardSegue) {}
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let editVC = segue.destination as? EditTaskViewController {
-            editVC.taskList = self
-        }
+    @IBAction func unwindToTasksList(segue: UIStoryboardSegue) {
+        taskTableView.reloadData()
     }
 }
