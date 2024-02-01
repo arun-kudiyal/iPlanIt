@@ -116,5 +116,131 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPlanIt/TaskList/TaskListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b414082b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.TaskListViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/TaskList/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b41408e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.TaskListViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/TaskList/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b41408e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.TaskListViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/TaskList/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b414080a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.TaskListViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/TaskList/TaskListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FBB4EDE-EE3D-4803-8386-6FB646F01277"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPlanIt/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4FBB4EDE-EE3D-4803-8386-6FB646F01277 - abef244cf42da4cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.HomeViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "4FBB4EDE-EE3D-4803-8386-6FB646F01277 - abef244cf42da4cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPlanIt.HomeViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "iPlanIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunkudiyal/Desktop/iPlanIt/iPlanIt/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

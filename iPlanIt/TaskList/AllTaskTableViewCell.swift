@@ -21,10 +21,11 @@ class AllTaskTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: false)
-
         // Configure the view for the selected state
+        super.setSelected(selected, animated: false)
     }
+    
+    
     
     func update(with task: Task) {
         taskEmoji?.text = task.emoji

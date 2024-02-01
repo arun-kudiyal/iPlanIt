@@ -29,9 +29,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var ongoingTaskLabel: UILabel!
     @IBOutlet weak var upcomingTaskLabel: UILabel!
     
-    /// Data from Model
-    let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)
-    let totalTasks: Double = Double(taskDataModel.getAllTasks().count)
+    var tasks: [Task] = []; var completedTasks: [Task] = []; var pendingTasks: [Task] = []
     
     override func viewDidLoad() {
         /// Setting current date
@@ -42,13 +40,12 @@ class HomeViewController: UIViewController {
         let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
         let summary = HKActivitySummary();
         
-        /// Creating Rring (Green)
-        // summary.appleExerciseTime = HKQuantity(unit: HKUnit.hour(), doubleValue: compledTasks);
-        // summary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.hour(), doubleValue: totalTasks);
+        let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)
+        let totalTasks: Double = Double(taskDataModel.getAllTasks().count)
         
-        /// Creating Rring (Red)
-        summary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalTasks);
-        summary.activeEnergyBurned = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: compledTasks);
+        /// Creating Rring (Green)
+        summary.appleExerciseTime = HKQuantity(unit: HKUnit.hour(), doubleValue: compledTasks);
+        summary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.hour(), doubleValue: totalTasks);
         
         /// Set the activity summary
         view.setActivitySummary(summary, animated: true)
@@ -70,8 +67,33 @@ class HomeViewController: UIViewController {
         calenderButton.tintColor = .black
         
         // MARK: - Changing the Activity Details
-        let tasks = AppTaskDataModel().getAllTasks()
+        self.tasks = taskDataModel.getAllTasks()
         let completedTasksCount = tasks.filter({$0.isCompleted}).count
+        
+        completedTaskLabel?.text = "⭐️ \(completedTasksCount)/\(tasks.count) Tasks Completed"
+        ongoingTaskLabel?.text = "\(tasks[0].emoji) \(tasks[0].title)"
+        upcomingTaskLabel?.text = "\(tasks[1].emoji) \(tasks[1].title)"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let summary = HKActivitySummary();
+        let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)
+        let totalTasks: Double = Double(taskDataModel.getAllTasks().count)
+        
+        let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
+        
+        /// Creating Rring (Red)
+        summary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalTasks);
+        summary.activeEnergyBurned = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: compledTasks);
+        
+        /// Set the activity summary
+        view.setActivitySummary(summary, animated: true)
+        
+        progressRingView.addSubview(view)
+        
+        // MARK: - Changing the Activity Details
+        tasks = taskDataModel.getAllTasks()
+        let completedTasksCount = self.tasks.filter({$0.isCompleted}).count
         
         completedTaskLabel?.text = "⭐️ \(completedTasksCount)/\(tasks.count) Tasks Completed"
         ongoingTaskLabel?.text = "\(tasks[0].emoji) \(tasks[0].title)"

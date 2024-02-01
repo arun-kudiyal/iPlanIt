@@ -22,27 +22,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     @IBOutlet weak var mainView: FSCalendar!
     
-    @objc func cancelButtonTapped() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /// Adding navigation bar
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
-        view.addSubview(navBar)
-
-        let navItem = UINavigationItem(title: "Calendar")
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: #selector(cancelButtonTapped))
-        navItem.leftBarButtonItem = cancelItem
-
-        navBar.setItems([navItem], animated: false)
         
         mainView.scrollDirection = .vertical
     }
     
-    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+    /* func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
         let compledTasks: Double = Double(AppTaskDataModel().getAllTasks().filter({$0.isCompleted}).count)
         let totalTasks: Double = Double(AppTaskDataModel().getAllTasks().count)
                     
@@ -53,5 +39,5 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.setActivitySummary(summary, animated: false)
         
         return view.asImage()
-    }
+    } */ 
 }
