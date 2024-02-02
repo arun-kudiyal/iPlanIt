@@ -8,6 +8,7 @@
 import UIKit
 import HealthKitUI
 
+// store in the file also
 extension Date {
     static func getCurrentDate() -> String {
         let dateFormatter = DateFormatter()
@@ -37,12 +38,14 @@ class HomeViewController: UIViewController {
         currentDate?.text = today
         
         /// Create ActivityRingView
+        // MARK: - Change this to sub method and call in viewDidLoad()
         let view = HKActivityRingView( frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300) )
         let summary = HKActivitySummary();
         
         let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)
         let totalTasks: Double = Double(taskDataModel.getAllTasks().count)
         
+        // Create the sepeerate file for creating the ring
         /// Creating Rring (Green)
         summary.appleExerciseTime = HKQuantity(unit: HKUnit.hour(), doubleValue: compledTasks);
         summary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.hour(), doubleValue: totalTasks);
@@ -70,11 +73,13 @@ class HomeViewController: UIViewController {
         self.tasks = taskDataModel.getAllTasks()
         let completedTasksCount = tasks.filter({$0.isCompleted}).count
         
+        // Cahnge the string and store in file
         completedTaskLabel?.text = "⭐️ \(completedTasksCount)/\(tasks.count) Tasks Completed"
         ongoingTaskLabel?.text = "\(tasks[0].emoji) \(tasks[0].title)"
         upcomingTaskLabel?.text = "\(tasks[1].emoji) \(tasks[1].title)"
     }
     
+    // MARK: - Change this to sub method and call in viewDidLoad()
     override func viewWillAppear(_ animated: Bool) {
         let summary = HKActivitySummary();
         let compledTasks: Double = Double(taskDataModel.getAllTasks().filter({$0.isCompleted}).count)

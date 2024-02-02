@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.scrollDirection = .vertical
+        // mainView.scrollDirection = .vertical
     }
     
     /* func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {

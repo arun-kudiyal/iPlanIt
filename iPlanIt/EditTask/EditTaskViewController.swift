@@ -110,6 +110,8 @@ class EditTaskViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    /// Singleton class for formatting the date and time
+    /// Depenecy Injection for the the functions to reaturn date and time for the appropriate dateFormat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "DoneSegue" else { return }

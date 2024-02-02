@@ -16,6 +16,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     var completedTasks: [Task] = []
     var pendingTasks: [Task] = []
     
+    // Method of tableView delegate and dataSource in functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +31,10 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         taskTableView.dataSource = self
     }
     
+    /// Create one prototype cell and change cell based on the condition
+    /// create an another .xib file for the UI of the TableView
+    
+    // create an extension for all the table view methods for quick access
     override func viewWillAppear(_ animated: Bool) {
         tasks = taskDataModel.getAllTasks()
         self.completedTasks = tasks.filter({$0.isCompleted})
