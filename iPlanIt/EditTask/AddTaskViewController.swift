@@ -61,8 +61,8 @@ class AddTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func unwindToAddTask(segue: UIStoryboardSegue) {}
     
     @IBAction func returnPressed(_ sender: UITextField) {
-            sender.resignFirstResponder()
-        }
+        sender.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

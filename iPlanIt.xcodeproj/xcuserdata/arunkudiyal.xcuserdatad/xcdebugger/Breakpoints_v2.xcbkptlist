@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AE1D5326-18C9-49D1-A7EC-E386EB6F8A4A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iPlanIt/EditTask/AddTaskViewController.swift"
@@ -79,8 +79,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "180">
+                  endingLineNumber = "38">
                </Location>
                <Location
                   uuid = "AE1D5326-18C9-49D1-A7EC-E386EB6F8A4A - 8173621111d17710"
@@ -94,8 +93,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "160">
+                  endingLineNumber = "38">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -143,8 +141,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "76">
+                  endingLineNumber = "34">
                </Location>
                <Location
                   uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b41408e9"
@@ -158,8 +155,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "76">
+                  endingLineNumber = "36">
                </Location>
                <Location
                   uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b41408e9"
@@ -173,8 +169,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "80">
+                  endingLineNumber = "36">
                </Location>
                <Location
                   uuid = "6623AEC4-F676-4EB1-B3A8-63DE4ACA4CF4 - d641e280b414080a"
@@ -188,8 +183,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "108">
+                  endingLineNumber = "33">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -221,8 +215,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "112">
+                  endingLineNumber = "81">
                </Location>
                <Location
                   uuid = "4FBB4EDE-EE3D-4803-8386-6FB646F01277 - abef244cf42da4cc"
@@ -236,8 +229,7 @@
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "236">
+                  endingLineNumber = "81">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -254,8 +246,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
             endingLineNumber = "12"
-            landmarkName = "getCurrentDate()"
-            landmarkType = "7">
+            landmarkName = "Date"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
